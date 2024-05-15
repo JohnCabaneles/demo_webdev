@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Targeted Selector</title>
+    <style>
+      /* div p {
+        background-color: #ddd;
+      } */
+
+      /* Direct Child */
+      /* div > P {
+        background: #ddd;
+      } */
+
+      /* Directly after the * or same level ng div */
+      /* div + p {
+        background: #333;
+        color: #fff;
+      } */
+
+      /* By Attribute */
+      a[target="_blank"] {
+        background: #f00;
+        color: #fff;
+      }
+
+      /* Lahat Sila */
+      /* input {
+        width: 100%;
+        margin-bottom: 5px;
+      } */
+
+      /* Specific attribute yung target */
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>P Lorem, sa loob ng DIV</p>
+      <ul>
+        <li>Item 1</li>
+        <li><p>P Lorem sa loob ng ul-> list item -> p</p></li>
+        <li>Item 3</li>
+      </ul>
+      <p>P Lorem sa loob ng Div tapos ng UL</p>
+    </div>
+
+    <p>P Lorem sa labas ng div</p>
+
+    <a href="#">Page 1</a> <a href="#" target="_self">Page2</a>
+    <a href="http://google.com" target="_blank">Google</a>
+    <br /><br />
+    <form>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="submit" placeholder="Submit" />
+    </form>
+  </body>
+</html>
